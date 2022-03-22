@@ -29,6 +29,7 @@ public class OrderRepository {
         Order0 o4 = new Order0(4L, "banana", 5.00, true);
         Order0 o5 = new Order0(5L, "coffee", 10.00, true);
 
+
         orderMap.put(o1.getId(), o1);
         orderMap.put(o2.getId(), o2);
         orderMap.put(o3.getId(), o3);
@@ -52,5 +53,21 @@ public class OrderRepository {
         oList.addAll(c);
         return oList;
     }
+
+    //Post-ing C -- create
+
+    public Order0 save(Order0 order0){
+        orderMap.put(order0.getId(), order0);
+        return order0;
+    }
+
+    // Put--ting U -- update
+
+    public Order0 update(Order0 o){
+        orderMap.put(o.getId(), o);
+        return o;
+    }
+
+
 
 }
